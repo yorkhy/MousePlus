@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "mouseplus",
+	"version": "${version}",
+	"name": "MousePlus",
+	"description": "Удобная мышь в инвентаре: Shift+перетаскивание и колёсико.",
+	"authors": [
+		"Me!"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/mouseplus/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"mouseplus.modid.client.MousePlusClient"
+		]
+	},
+	"mixins": [
+		"mouseplus.mixins.json",
+		{
+			"config": "mouseplus.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
